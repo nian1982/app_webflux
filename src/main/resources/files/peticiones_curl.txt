@@ -1,0 +1,17 @@
+curl -X GET "http://localhost:8080/producto" -H "Accept: application/json" -s | jq .
+
+curl -X GET "http://localhost:8080/api/v2/productos" -H "Accept: application/json" -s | jq .
+
+curl -X GET "http://localhost:8080/api/v2/productos/66c546ddaa77835fd82c858c" -H "Accept: application/json" -s | jq .
+
+curl -X POST "http://localhost:8080/api/v2/productos" \
+-H "Content-Type: application/json" \
+-d '{"nombre":"PS2", "precio":100.0}' \
+-s | jq .
+
+curl -X PUT "http://localhost:8080/api/v2/productos/66cd2e25dc170902f557d9e4" \
+-H "Content-Type: application/json" \
+-d '{"nombre":"PS3 Slim", "precio":350.00}' \
+-s | jq .
+
+

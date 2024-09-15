@@ -1,0 +1,12 @@
+docker exec -it <nombreImagen> bash
+mongosh //valida que exista un mongo, se pueden crear hasta 27 contenedores de mongo
+
+db. + tab*2 //ayuda ej: db.create
+
+db.createCollection | createUser | createView ej: db.createCollection("usuarios")
+db.usuarios.find() //similar a hacer un select *
+db.usuarios.update({nombre: 'jose'},{$set: {nombre:'juan'}})
+
+use nombreDB
+show dbs
+show collections
